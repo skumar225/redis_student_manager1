@@ -1,0 +1,20 @@
+<h1>Here are the students</h1>
+
+<% students.forEach (function (student) { %>
+
+  <p>
+    <%= student %>
+
+    <form action="/remove/<%= student %>?_method=DELETE">
+      <input type="submit" value="X">
+    </form>
+
+  </p>
+
+  <h2>Add a new student</h2>
+
+  <form action="/create" method="POST">
+    <label for="person">Student Name: </label>
+    <input type="text" name="person" id="person" autofocus required>
+    <input type="submit" value="submit">
+  </form>
